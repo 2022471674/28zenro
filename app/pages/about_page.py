@@ -254,7 +254,8 @@ class AboutPage(QWidget):
         layout.addWidget(self._caption(SLOGAN))
 
         row = QHBoxLayout()
-        row.setSpacing(24)
+        row.setSpacing(8)
+        row.setAlignment(Qt.AlignmentFlag.AlignLeft)
         for path, name, tip in (
             (WECHAT_QR, "微信", "微信扫一扫赞赏"),
             (ALIPAY_QR, "支付宝", "支付宝扫一扫赞赏"),
@@ -263,14 +264,14 @@ class AboutPage(QWidget):
             box.setSpacing(6)
             title = QLabel(name)
             title.setObjectName("caption")
-            title.setAlignment(Qt.AlignmentFlag.AlignHCenter)
+            title.setAlignment(Qt.AlignmentFlag.AlignLeft)
             box.addWidget(title)
             pm = QPixmap(str(path))
             if pm.isNull():
                 miss = QLabel(tip)
                 miss.setObjectName("caption")
                 miss.setWordWrap(True)
-                miss.setAlignment(Qt.AlignmentFlag.AlignCenter)
+                miss.setAlignment(Qt.AlignmentFlag.AlignLeft)
                 box.addWidget(miss)
             else:
                 img = QLabel()
@@ -278,10 +279,11 @@ class AboutPage(QWidget):
                     QR_SIZE, QR_SIZE,
                     Qt.AspectRatioMode.KeepAspectRatio,
                     Qt.TransformationMode.SmoothTransformation))
-                img.setAlignment(Qt.AlignmentFlag.AlignCenter)
+                img.setAlignment(Qt.AlignmentFlag.AlignLeft)
                 box.addWidget(img)
             row.addLayout(box)
         layout.addLayout(row)
+        layout.addStretch(1)
         return card
 
     # ------------------------------------------------------- 协议与仓库
