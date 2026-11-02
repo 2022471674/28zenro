@@ -1,22 +1,22 @@
-# cipherNest MCP 服务器依赖
-# 安装：pip install -r mcp/requirements.txt
-#
-# 必需
-mcp>=2.3.0            # MCP Python SDK（FastMCP）
-requests>=2.31.0      # Web 系工具（web_fuzz / dir_scan / 指纹 / 代理池 …）
-#
-# 按工具组可选（缺失时对应工具组会被跳过，不影响其他组）
-Pillow>=10.0.0        # cn_image：图片 Base64 / LSB 隐写 / 水印
-PyYAML>=6.0.0         # cn_web：指纹规则（dict/fingerprints/*.yaml）
-cryptography>=42.0    # cn_crypto：JWT 的 RS*/ES* 算法
-#
-# 外部命令（非 pip 依赖）
-# node                # cn_codec：jsfuck_decode
-#
-# ---- 第三方插件依赖（mcp/plugins/，按需安装） ----
-# trufflehog          自带 trufflehog.exe，无需 pip
-# sqlmap              纯标准库，无需 pip
-# flaskcookie         flask>=3  itsdangerous>=2
-# OneForAll           fire tldextract loguru requests bs4 exrex
-# FileSensor          scrapy>=2.11
-# 完整清单见各插件目录里的 requirements.txt
+# 28zenro MCP 服务器依赖
+# 安装：pip install -r mcp/requirements.txt
+#
+# 必需
+mcp>=2.3.0            # MCP Python SDK（FastMCP）
+requests>=2.31.0      # Web 系工具（web_fuzz / dir_scan / 指纹 / 代理池 …）
+#
+# 按工具组可选（缺失时对应工具组会被跳过，不影响其他组）
+Pillow>=10.0.0        # cn_image：图片 Base64 / LSB 隐写 / 水印
+PyYAML>=6.0.0         # cn_web：指纹规则（dict/fingerprints/*.yaml）
+cryptography>=42.0    # cn_crypto：JWT 的 RS*/ES* 算法
+#
+# 外部命令（非 pip 依赖）
+# node                # cn_codec：jsfuck_decode
+#
+# ---- 第三方插件依赖（mcp/plugins/，按需安装） ----
+# trufflehog          自带 trufflehog.exe，无需 pip
+# sqlmap              纯标准库，无需 pip
+# flaskcookie         flask>=3  itsdangerous>=2
+# OneForAll           fire tldextract loguru requests bs4 exrex
+# FileSensor          scrapy>=2.11
+# 完整清单见各插件目录里的 requirements.txt

@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        如果只是使用上的疑问，建议先看 [README](HUMAN_README.md) 和搜索 [已有 Issue](https://code.lvlv.asia/28.7/cipherNest/issues)。
+        如果只是使用上的疑问，建议先看 [README](HUMAN_README.md) 和搜索 [已有 Issue](https://code.lvlv.asia/28.7/28zenro/issues)。
         涉及想法交流、经验分享的问题更适合在仓库讨论区讨论。
 
   - type: textarea

@@ -558,7 +558,7 @@ def _self_test() -> None:
     assert sm4_ecb_decrypt(ct, key, padding=False) == pt
 
     # -- SM4 加解密往返（PKCS7 + CBC）--
-    msg = b"cipherNest national crypto self test"
+    msg = b"28zenro national crypto self test"
     assert sm4_ecb_decrypt(sm4_ecb_encrypt(msg, key), key) == msg
     iv = bytes.fromhex("000102030405060708090a0b0c0d0e0f")
     assert sm4_cbc_decrypt(sm4_cbc_encrypt(msg, key, iv), key, iv) == msg

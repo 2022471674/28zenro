@@ -1,30 +1,30 @@
-id: thinkphp
-info:
-  name: ThinkPHP
-  author: cipherNest
-  tags: detect,tech,thinkphp,php
-  severity: info
-  metadata:
-    product: thinkphp
-    vendor: thinkphp
-    verified: true
-http:
-  - method: GET
-    path:
-      - '/'
-    matchers:
-      - type: word
-        words:
-          - thinkphp_show_page_trace
-        part: body
-        case-insensitive: true
-      - type: word
-        words:
-          - x-powered-by: thinkphp
-        part: header
-        case-insensitive: true
-      - type: word
-        words:
-          - ThinkPHP
-        part: header
-        case-insensitive: true
+id: thinkphp
+info:
+  name: ThinkPHP
+  author: 28zenro
+  tags: detect,tech,thinkphp,php
+  severity: info
+  metadata:
+    product: thinkphp
+    vendor: thinkphp
+    verified: true
+http:
+  - method: GET
+    path:
+      - '/'
+    matchers:
+      - type: word
+        words:
+          - thinkphp_show_page_trace
+        part: body
+        case-insensitive: true
+      - type: word
+        words:
+          - x-powered-by: thinkphp
+        part: header
+        case-insensitive: true
+      - type: word
+        words:
+          - ThinkPHP
+        part: header
+        case-insensitive: true

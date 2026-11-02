@@ -1,30 +1,30 @@
-# cipherNest 运行依赖
-#
-# 本项目密码学算法（SM2/SM3/SM4、Base 系列、ROT、RSA 攻击、哈希长度扩展等）
-# 为纯 Python 实现，零第三方依赖；下方仅覆盖 GUI、网络与可选能力所需的包。
-#
-# 安装（建议使用虚拟环境）：
-#   python -m venv .venv
-#   .venv\Scripts\activate        # Windows
-#   pip install -r requirements.txt
-#
-# 说明：
-#   - PySide6 / qfluentwidgets 为桌面 GUI 必需（打包为 cipherNest.exe 也依赖）。
-#   - 若仅使用 CLI / MCP（mcp_server.py）或纯 lib 函数，可跳过 GUI 组。
-#   - MCP 插件（mcp/plugins/ 下的 OneForAll、sqlmap、FileSensor 等第三方工具）
-#     各有独立依赖，见 mcp/plugins/*/ 内各自说明，不在此清单内。
-
-# ---- 核心（网络 / 解析 / 密码学可选能力）----
-requests>=2.31
-beautifulsoup4>=4.12          # bs4：JSFinder / Web Fuzz HTML 解析
-PyYAML>=6.0                   # 指纹规则 YAML 解析
-mmh3>=4.0                     # favicon 哈希指纹
-Pillow>=10.0                  # PIL：LSB 隐写 / 水印 / 图片工具
-cryptography>=41.0            # JWT RS/ES 验签、ECDSA 曲线
-
-# ---- GUI（桌面程序必需）----
-PySide6>=6.6                  # Qt 框架 + QtWebEngine（内嵌浏览器）
-qfluentwidgets>=1.5           # Fluent 风格 UI 组件
-
-# ---- 测试 / 开发（可选）----
-pytest>=7.4
+# 28zenro 运行依赖
+#
+# 本项目密码学算法（SM2/SM3/SM4、Base 系列、ROT、RSA 攻击、哈希长度扩展等）
+# 为纯 Python 实现，零第三方依赖；下方仅覆盖 GUI、网络与可选能力所需的包。
+#
+# 安装（建议使用虚拟环境）：
+#   python -m venv .venv
+#   .venv\Scripts\activate        # Windows
+#   pip install -r requirements.txt
+#
+# 说明：
+#   - PySide6 / qfluentwidgets 为桌面 GUI 必需（打包为 28zenro.exe 也依赖）。
+#   - 若仅使用 CLI / MCP（mcp_server.py）或纯 lib 函数，可跳过 GUI 组。
+#   - MCP 插件（mcp/plugins/ 下的 OneForAll、sqlmap、FileSensor 等第三方工具）
+#     各有独立依赖，见 mcp/plugins/*/ 内各自说明，不在此清单内。
+
+# ---- 核心（网络 / 解析 / 密码学可选能力）----
+requests>=2.31
+beautifulsoup4>=4.12          # bs4：JSFinder / Web Fuzz HTML 解析
+PyYAML>=6.0                   # 指纹规则 YAML 解析
+mmh3>=4.0                     # favicon 哈希指纹
+Pillow>=10.0                  # PIL：LSB 隐写 / 水印 / 图片工具
+cryptography>=41.0            # JWT RS/ES 验签、ECDSA 曲线
+
+# ---- GUI（桌面程序必需）----
+PySide6>=6.6                  # Qt 框架 + QtWebEngine（内嵌浏览器）
+qfluentwidgets>=1.5           # Fluent 风格 UI 组件
+
+# ---- 测试 / 开发（可选）----
+pytest>=7.4

@@ -1,27 +1,27 @@
-id: tech-detect-generic
-info:
-  name: Generic Technology Fingerprint
-  author: cipherNest
-  severity: info
-  description: 通用技术栈指纹（X-Powered-By / Server 头）
-  tags: tech,detect
-http:
-  - method: GET
-    path:
-      - "{{BaseURL}}"
-    matchers-condition: or
-    matchers:
-      - type: word
-        part: header
-        words:
-          - "X-Powered-By"
-      - type: word
-        part: header
-        words:
-          - "Server"
-    extractors:
-      - type: kval
-        name: server_header
-        kval:
-          - "Server"
-          - "X-Powered-By"
+id: tech-detect-generic
+info:
+  name: Generic Technology Fingerprint
+  author: 28zenro
+  severity: info
+  description: 通用技术栈指纹（X-Powered-By / Server 头）
+  tags: tech,detect
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+    matchers-condition: or
+    matchers:
+      - type: word
+        part: header
+        words:
+          - "X-Powered-By"
+      - type: word
+        part: header
+        words:
+          - "Server"
+    extractors:
+      - type: kval
+        name: server_header
+        kval:
+          - "Server"
+          - "X-Powered-By"

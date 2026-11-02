@@ -1,27 +1,27 @@
-id: nacos
-info:
-  name: Alibaba Nacos
-  author: cipherNest
-  tags: detect,tech,nacos,java,config
-  severity: info
-  metadata:
-    product: nacos
-    vendor: alibaba
-    verified: true
-http:
-  - method: GET
-    path:
-      - '/nacos/'
-    matchers:
-      - type: word
-        words:
-          - console-fe
-          - nacos
-        condition: and
-        part: body
-        case-insensitive: true
-      - type: word
-        words:
-          - 'Nacos Console'
-        part: body
-        case-insensitive: true
+id: nacos
+info:
+  name: Alibaba Nacos
+  author: 28zenro
+  tags: detect,tech,nacos,java,config
+  severity: info
+  metadata:
+    product: nacos
+    vendor: alibaba
+    verified: true
+http:
+  - method: GET
+    path:
+      - '/nacos/'
+    matchers:
+      - type: word
+        words:
+          - console-fe
+          - nacos
+        condition: and
+        part: body
+        case-insensitive: true
+      - type: word
+        words:
+          - 'Nacos Console'
+        part: body
+        case-insensitive: true

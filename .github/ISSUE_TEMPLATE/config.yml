@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
   - name: 💬 使用讨论 / 提问
-    url: https://code.lvlv.asia/28.7/cipherNest
+    url: https://code.lvlv.asia/28.7/28zenro
     about: 使用问题、功能想法、经验分享请优先在仓库讨论区 / 提交记录下交流，而不是开 Issue。
   - name: 📖 项目文档
-    url: https://code.lvlv.asia/28.7/cipherNest
+    url: https://code.lvlv.asia/28.7/28zenro
     about: 先阅读 README（HUMAN_README.md），可能已经回答了你的问题。

@@ -1,25 +1,25 @@
-id: exposed-env-file
-info:
-  name: Exposed .env File
-  author: cipherNest
-  severity: high
-  description: 检测到 .env 配置文件可被访问，可能泄露数据库凭据 / 密钥
-  reference:
-    - https://owasp.org/www-project-web-security-testing-guide/
-  tags: exposure,config,dotenv
-http:
-  - method: GET
-    path:
-      - "{{BaseURL}}/.env"
-    matchers-condition: and
-    matchers:
-      - type: status
-        status:
-          - 200
-      - type: word
-        words:
-          - "APP_KEY"
-          - "DB_PASSWORD"
-          - "DB_USERNAME"
-          - "SECRET_KEY"
-        condition: or
+id: exposed-env-file
+info:
+  name: Exposed .env File
+  author: 28zenro
+  severity: high
+  description: 检测到 .env 配置文件可被访问，可能泄露数据库凭据 / 密钥
+  reference:
+    - https://owasp.org/www-project-web-security-testing-guide/
+  tags: exposure,config,dotenv
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/.env"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "APP_KEY"
+          - "DB_PASSWORD"
+          - "DB_USERNAME"
+          - "SECRET_KEY"
+        condition: or

@@ -1,5 +1,5 @@
 # -*- mode: python ; coding: utf-8 -*-
-# cipherNest v2 打包配置：PySide6 + QFluentWidgets 单文件 exe
+# 28zenro v2 打包配置：PySide6 + QFluentWidgets 单文件 exe
 # 入口 main.py；static 随包（标题栏图标）；.env 已弃用不再打入。
 
 a = Analysis(
@@ -23,7 +23,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='cipherNest',
+    name='28zenro',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

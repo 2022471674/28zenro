@@ -1,34 +1,34 @@
-id: wordpress
-info:
-  name: WordPress
-  author: cipherNest
-  tags: detect,tech,wordpress,cms,php
-  severity: info
-  metadata:
-    product: wordpress
-    vendor: wordpress
-    verified: true
-http:
-  - method: GET
-    path:
-      - '/'
-    matchers:
-      - type: word
-        words:
-          - wp-content
-        part: body
-        case-insensitive: true
-      - type: word
-        words:
-          - wp-includes
-        part: body
-        case-insensitive: true
-      - type: regex
-        regex:
-          - (?i)<meta[^>]+name=["']generator["'][^>]+content=["']WordPress\s*([\d.]+)
-        part: body
-    extractors:
-      - name: version
-        type: regex
-        regex:
-          - (?i)<meta[^>]+name=["']generator["'][^>]+content=["']WordPress\s*([\d.]+)
+id: wordpress
+info:
+  name: WordPress
+  author: 28zenro
+  tags: detect,tech,wordpress,cms,php
+  severity: info
+  metadata:
+    product: wordpress
+    vendor: wordpress
+    verified: true
+http:
+  - method: GET
+    path:
+      - '/'
+    matchers:
+      - type: word
+        words:
+          - wp-content
+        part: body
+        case-insensitive: true
+      - type: word
+        words:
+          - wp-includes
+        part: body
+        case-insensitive: true
+      - type: regex
+        regex:
+          - (?i)<meta[^>]+name=["']generator["'][^>]+content=["']WordPress\s*([\d.]+)
+        part: body
+    extractors:
+      - name: version
+        type: regex
+        regex:
+          - (?i)<meta[^>]+name=["']generator["'][^>]+content=["']WordPress\s*([\d.]+)

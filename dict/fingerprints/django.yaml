@@ -1,25 +1,25 @@
-id: django
-info:
-  name: Django
-  author: cipherNest
-  tags: detect,tech,django,python,framework
-  severity: info
-  metadata:
-    product: django
-    vendor: djangoproject
-    verified: true
-http:
-  - method: GET
-    path:
-      - '/'
-    matchers:
-      - type: word
-        words:
-          - csrftoken
-        part: body
-        case-insensitive: true
-      - type: word
-        words:
-          - django
-        part: header
-        case-insensitive: true
+id: django
+info:
+  name: Django
+  author: 28zenro
+  tags: detect,tech,django,python,framework
+  severity: info
+  metadata:
+    product: django
+    vendor: djangoproject
+    verified: true
+http:
+  - method: GET
+    path:
+      - '/'
+    matchers:
+      - type: word
+        words:
+          - csrftoken
+        part: body
+        case-insensitive: true
+      - type: word
+        words:
+          - django
+        part: header
+        case-insensitive: true

@@ -1,23 +1,23 @@
-id: exposed-git-config
-info:
-  name: Exposed .git/config
-  author: cipherNest
-  severity: medium
-  description: 检测到 .git/config 可访问，存在源码泄露风险
-  reference:
-    - https://github.com/lijiejie/GitHack
-  tags: exposure,git
-http:
-  - method: GET
-    path:
-      - "{{BaseURL}}/.git/config"
-    matchers-condition: and
-    matchers:
-      - type: status
-        status:
-          - 200
-      - type: word
-        words:
-          - "[core]"
-          - "repositoryformatversion"
-        condition: or
+id: exposed-git-config
+info:
+  name: Exposed .git/config
+  author: 28zenro
+  severity: medium
+  description: 检测到 .git/config 可访问，存在源码泄露风险
+  reference:
+    - https://github.com/lijiejie/GitHack
+  tags: exposure,git
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/.git/config"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "[core]"
+          - "repositoryformatversion"
+        condition: or

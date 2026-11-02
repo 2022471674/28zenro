@@ -43,7 +43,7 @@ from lib.runtime_paths import data_root
 #: 默认示例：一段覆盖常见语法的 Markdown，方便用户直接点「渲染」看效果。
 DEFAULT_SAMPLE = """# Markdown 编辑器
 
-欢迎使用 **cipherNest** 的 Markdown 工具。
+欢迎使用 **28zenro** 的 Markdown 工具。
 
 ## 功能
 
@@ -63,7 +63,7 @@ def md5(text: str) -> str:
 
 
 if __name__ == "__main__":
-    print(md5("cipherNest"))  # 输出 32 位十六进制
+    print(md5("28zenro"))  # 输出 32 位十六进制
 ```
 
 ## 表格

@@ -1,24 +1,24 @@
-id: phpmyadmin
-info:
-  name: phpMyAdmin
-  author: cipherNest
-  tags: detect,tech,phpmyadmin,php,database
-  severity: info
-  metadata:
-    product: phpmyadmin
-    vendor: phpmyadmin
-    verified: true
-http:
-  - method: GET
-    path:
-      - '/'
-    matchers:
-      - type: word
-        words:
-          - phpMyAdmin
-        part: body
-        case-insensitive: true
-      - type: favicon
-        hash:
-          - -268363220
-          - 461248318
+id: phpmyadmin
+info:
+  name: phpMyAdmin
+  author: 28zenro
+  tags: detect,tech,phpmyadmin,php,database
+  severity: info
+  metadata:
+    product: phpmyadmin
+    vendor: phpmyadmin
+    verified: true
+http:
+  - method: GET
+    path:
+      - '/'
+    matchers:
+      - type: word
+        words:
+          - phpMyAdmin
+        part: body
+        case-insensitive: true
+      - type: favicon
+        hash:
+          - -268363220
+          - 461248318

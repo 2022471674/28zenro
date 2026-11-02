@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         感谢你花时间报告问题！提交前请先确认：
-        - 已搜索 [已有 Issue](https://code.lvlv.asia/28.7/cipherNest/issues)，避免重复；
+        - 已搜索 [已有 Issue](https://code.lvlv.asia/28.7/28zenro/issues)，避免重复；
         - 已阅读 [README](HUMAN_README.md) 与 [常见问题](#)；
         - 尽量提供**可复现**的信息，这能极大加快定位速度。
 
