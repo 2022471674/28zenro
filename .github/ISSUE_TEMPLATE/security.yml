@@ -1,0 +1,62 @@
+name: 🔒 安全漏洞报告
+description: 报告一个安全漏洞（请勿公开敏感细节）
+title: "[Security] "
+labels: ["security"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **请勿在 Issue 里公开可被利用的细节或 POC。**
+
+        如果漏洞可能造成实际影响，请先通过私密渠道联系维护者，或在确认后再补充细节。
+        感谢你为项目安全做出的贡献。
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 严重程度
+      description: 你的初步评估。
+      options:
+        - 低
+        - 中
+        - 高
+        - 严重
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 漏洞概述
+      description: 简要描述漏洞类型与影响范围（不要贴可被直接利用的 POC）。
+      placeholder: |
+        例如：某工具的输入未做转义，可能导致 XX 注入。
+    validations:
+      required: true
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: 涉及模块
+      options:
+        - Web 扫描 / 请求器
+        - MCP 服务
+        - 文件 / 路径处理
+        - 依赖 / 供应链
+        - 其他
+
+  - type: input
+    id: version
+    attributes:
+      label: 受影响版本
+      placeholder: "例如：1.27.2 及以下"
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤（可脱敏）
+      description: 在不泄露敏感信息的前提下描述复现路径。
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 补充信息
+      description: 参考 CVE、影响评估、修复建议等。

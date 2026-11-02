@@ -1,0 +1,30 @@
+id: struts2
+info:
+  name: Apache Struts2
+  author: cipherNest
+  tags: detect,tech,struts,java
+  severity: info
+  metadata:
+    product: struts2
+    vendor: apache
+    verified: true
+http:
+  - method: GET
+    path:
+      - '/'
+    matchers:
+      - type: word
+        words:
+          - org.apache.struts2
+        part: body
+        case-insensitive: true
+      - type: word
+        words:
+          - .do;jsessionid=
+        part: body
+        case-insensitive: true
+      - type: word
+        words:
+          - struts
+        part: header
+        case-insensitive: true

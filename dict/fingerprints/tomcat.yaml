@@ -1,0 +1,24 @@
+id: apache-tomcat
+info:
+  name: Apache Tomcat
+  author: cipherNest
+  tags: detect,tech,tomcat,java,webserver
+  severity: info
+  metadata:
+    product: tomcat
+    vendor: apache
+    verified: true
+http:
+  - method: GET
+    path:
+      - '/'
+    matchers:
+      - type: word
+        words:
+          - Apache Tomcat
+        part: body
+        case-insensitive: true
+      - type: regex
+        regex:
+          - (?i)server:\s*apache-coyote
+        part: header

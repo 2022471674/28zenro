@@ -1,0 +1,91 @@
+# ---- Python 缓存 ----
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ---- 打包 / 发布产物 ----
+build/
+dist
+release/
+
+# ---- 运行输出与临时文件 ----
+output/
+*.log
+*.bak
+
+# ---- 本地诊断脚本与截图 ----
+_xref_diag.py
+_shot_settings.png
+
+# ---- 开发期临时脚本与调试残留 ----
+# 临时调试脚本（仅项目根目录的 _tmp* / _xref* 等，不误伤 __init__.py 与 _helpers 等包文件）
+_tmp*.py
+_tmp*.*
+_xref*.py
+
+# 永远不要忽略 Python 包文件（覆盖上面的下划线规则）
+!__init__.py
+!**/__init__.py
+!**/_helpers.py
+!**/_paths.py
+*.sig.txt
+
+# ---- MCP 中间产物 / 契约导出 ----
+mcp/_*.txt
+mcp/**/_*.txt
+mcp/**/_chunks/
+
+# ---- 文档草稿（发布物，不进代码库）----
+docs/*_draft.md
+
+# ---- 本地下载的壁纸 / 临时图片 ----
+genshin_wallpaper*.jpg
+
+# ---- 虚拟环境 ----
+.venv/
+venv/
+
+# ---- 本地 AI 助手记忆 ----
+.workbuddy-ai/
+memory/
+
+# ---- 运行时生成的数据库 / Payload 产物 ----
+payload/payloads.db
+payload/build/
+
+# ---- 编辑器 / IDE ----
+.vscode/
+.idea/
+
+
+# ---- 本地环境/配置（历史遗留，已废弃，勿提交） ----
+.env
+.env.*
+
+# ---- 第三方大文件 / 二进制数据（不随仓库分发，由「检测 + 下载」逻辑按需获取）----
+# MCP 插件二进制与数据（保留小代码/清单，仅排除大体积文件）
+mcp/plugins/trufflehog/trufflehog.exe
+mcp/plugins/sqlmap-master/data/txt/wordlist.tx_
+mcp/plugins/OneForAll/data/ip2location.db
+mcp/plugins/OneForAll/data/ip2location.zip
+mcp/plugins/OneForAll/data/ip2region.db
+mcp/plugins/OneForAll/data/subnames.txt
+mcp/plugins/OneForAll/data/subnames_big.7z
+mcp/plugins/OneForAll/data/subnames_medium.txt
+mcp/plugins/OneForAll/results/result.sqlite3
+mcp/plugins/OneForAll/thirdparty/massdns/windows/x64/cygwin1.dll
+mcp/plugins/OneForAll/thirdparty/massdns/windows/x86/cygwin1.dll
+
+# 字典 / 模板大文件
+dict/rockyou.txt.gz
+dict/nuclei-templates/official/nuclei-templates-main/TEMPLATES-STATS.md
+dict/nuclei-templates/official/nuclei-templates-main/cves.json
+dict/nuclei-templates/official/nuclei-templates-main/templates-checksum.txt
+dict/nuclei-templates/official/nuclei-templates-main/helpers/payloads/mozila-content-spoof.pdf
+dict/nuclei-templates/official/nuclei-templates-main/helpers/wordlists/params.txt
+dict/nuclei-templates/official/nuclei-templates-main/helpers/wordlists/wordpress-plugins.txt
+dict/nuclei-templates/official/nuclei-templates-main/http/technologies/wordpress/plugins/wordpress-plugin-detect.yaml
+dict/nuclei-templates/official/nuclei-templates-main/http/technologies/wordpress/themes/wordpress-theme-detect.yaml
+
+# ---- 本地 git 历史备份（勿提交）----
+.git_backup_old/

@@ -1,0 +1,22 @@
+id: phpinfo-exposure
+info:
+  name: phpinfo() Page Exposure
+  author: cipherNest
+  severity: low
+  description: 检测到 phpinfo() 信息泄露页面
+  tags: exposure,php
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/phpinfo.php"
+      - "{{BaseURL}}/info.php"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "PHP Version"
+          - "phpinfo()"
+        condition: or

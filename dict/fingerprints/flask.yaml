@@ -1,0 +1,20 @@
+id: flask
+info:
+  name: Flask
+  author: cipherNest
+  tags: detect,tech,flask,python,framework
+  severity: info
+  metadata:
+    product: flask
+    vendor: pallets
+    verified: true
+http:
+  - method: GET
+    path:
+      - '/'
+    matchers:
+      - type: word
+        words:
+          - server: werkzeug
+        part: header
+        case-insensitive: true

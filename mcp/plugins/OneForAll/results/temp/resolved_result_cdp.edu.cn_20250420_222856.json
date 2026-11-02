@@ -1,0 +1,1 @@
+{"name":"jy-o.cdp.edu.cn.","type":"A","class":"IN","status":"NOERROR","data":{"answers":[{"ttl":3600,"type":"CNAME","class":"IN","name":"jy-o.cdp.edu.cn.","data":"jy.cdp.edu.cn."},{"ttl":3600,"type":"A","class":"IN","name":"jy.cdp.edu.cn.","data":"121.48.29.111"}]},"resolver":"4.2.2.1:53"}

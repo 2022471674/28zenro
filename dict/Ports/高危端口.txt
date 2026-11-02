@@ -1,0 +1,85 @@
+# 高危端口（未授权访问 / 弱口令 / 远程管理 / 内网横向）
+# 格式：端口<空格>服务名
+# 说明写在服务名后面的括号里，解析时会被忽略
+2375 docker-api(未授权可直接控宿主机)
+2376 docker-tls
+2379 etcd(未授权可读全量 K8s 配置)
+2380 etcd-peer
+3306 mysql(弱口令/空口令)
+5432 postgresql(弱口令)
+1433 mssql(弱口令/SA 提权)
+1521 oracle(默认口令)
+2483 oracle-nonssl
+2484 oracle-ssl
+6379 redis(未授权写 crontab/SSH key)
+16379 redis-cluster
+27017 mongodb(未授权)
+27018 mongodb-shard
+28017 mongodb-http
+11211 memcached(未授权)
+9200 elasticsearch(未授权/目录遍历)
+9300 elasticsearch
+5984 couchdb(未授权)
+8529 arangodb(未授权)
+9042 cassandra(未授权)
+2181 zookeeper(未授权)
+9092 kafka(未授权)
+61616 activemq(未授权)
+8161 activemq-web(默认 admin/admin)
+5672 rabbitmq(默认 guest/guest)
+15672 rabbitmq-mgmt(默认 guest/guest)
+22 ssh(弱口令/私钥泄露)
+23 telnet(明文传输)
+21 ftp(匿名登录)
+512 rexec
+513 rlogin
+514 rsh
+3389 rdp(弱口令/BlueKeep)
+5900 vnc(空口令)
+5901 vnc
+5800 vnc-http
+4899 radmin(弱口令)
+5631 pcanywhere
+5985 winrm(弱口令)
+5986 winrm-ssl
+445 smb(永恒之蓝/横向)
+139 netbios-ssn
+135 msrpc
+137 netbios-ns
+138 netbios-dgm
+389 ldap(匿名绑定)
+636 ldaps
+161 snmp(public 团体字)
+162 snmptrap
+623 ipmi(默认 ADMIN/ADMIN)
+873 rsync(未授权)
+2049 nfs(未授权挂载)
+111 rpcbind
+69 tftp(未授权读文件)
+512-514 rsh-family
+2375-2376 docker
+6443 kubernetes-api(未授权)
+10250 kubelet(未授权 exec)
+10255 kubelet-ro
+8080 tomcat-manager(弱口令)
+8009 ajp13(Ghostcat)
+7001 weblogic(反序列化)
+7002 weblogic-ssl
+8180 tomcat
+9060 websphere
+9043 websphere-admin
+4848 glassfish(默认 admin/adminadmin)
+10000 webmin(弱口令)
+9090 prometheus(未授权)
+3000 grafana(默认 admin/admin)
+5601 kibana(未授权)
+8086 influxdb(未授权)
+8123 clickhouse(默认 default 空口令)
+7474 neo4j(默认 neo4j/neo4j)
+7001-7002 weblogic
+9000 php-fpm(未授权 RCE)
+9001 supervisord(默认 user/123)
+8888 jupyter(未授权)
+50070 hdfs(未授权)
+50000 db2
+4369 epmd

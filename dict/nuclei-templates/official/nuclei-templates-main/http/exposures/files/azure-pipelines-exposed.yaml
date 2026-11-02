@@ -1,0 +1,45 @@
+id: azure-pipelines-exposed
+
+info:
+  name: Azure Pipelines Configuration File Disclosure
+  author: DhiyaneshDk
+  severity: medium
+  description: Azure Pipelines internal critical file is disclosed.
+  classification:
+    cpe: cpe:2.3:a:microsoft:azure_pipelines_agent:*:*:*:*:*:*:*:*
+  metadata:
+    verified: true
+    max-request: 2
+    vendor: microsoft
+    product: azure_pipelines_agent
+    shodan-query: html:"azure-pipelines.yml"
+  tags: config,exposure,azure,microsoft,cloud,devops,files,vuln
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/.azure-pipelines.yml"
+      - "{{BaseURL}}/azure-pipelines.yml"
+
+    stop-at-first-match: true
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "trigger:"
+          - "pool:"
+          - "variables:"
+        condition: and
+
+      - type: word
+        part: header
+        words:
+          - "text/html"
+        negative: true
+
+      - type: status
+        status:
+          - 200
+# digest: 490a00463044021f2d5f028b74f4258603b7d9285fac5aa9cc594a7d5023c6b13e9fc152f927e40221008633c849d87c9dab0448899c1d6d00e251da5f42d87c28aae678015ad5de7c41:922c64590222798bb761d5b6d8e72950

@@ -1,0 +1,22 @@
+id: swagger-ui-exposure
+info:
+  name: Swagger UI Exposure
+  author: cipherNest
+  severity: low
+  description: 检测到 Swagger / OpenAPI 接口文档暴露
+  tags: exposure,swagger,api
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/swagger-ui.html"
+      - "{{BaseURL}}/swagger/index.html"
+      - "{{BaseURL}}/v2/api-docs"
+      - "{{BaseURL}}/v3/api-docs"
+    matchers-condition: or
+    matchers:
+      - type: word
+        words:
+          - "swagger-ui"
+          - "Swagger UI"
+          - "openapi"
+        condition: or

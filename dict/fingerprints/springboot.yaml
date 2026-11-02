@@ -1,0 +1,29 @@
+id: springboot
+info:
+  name: Spring Boot
+  author: cipherNest
+  tags: detect,tech,spring,java
+  severity: info
+  metadata:
+    product: spring-boot
+    vendor: pivotal
+    verified: true
+http:
+  - method: GET
+    path:
+      - '/'
+    matchers:
+      - type: word
+        words:
+          - whitelabel error page
+        part: body
+        case-insensitive: true
+      - type: word
+        words:
+          - this application has no explicit mapping for /error
+        part: body
+        case-insensitive: true
+      - type: favicon
+        hash:
+          - 116323821
+          - 0488faca4c19046b94d07c3ee83cf9d6
