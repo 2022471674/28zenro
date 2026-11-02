@@ -1,19 +1,19 @@
-id: exposed-ds-store
-info:
-  name: Exposed .DS_Store
-  author: 28zenro
-  severity: info
-  description: 检测到 .DS_Store 文件泄露（可能泄露目录结构）
-  tags: exposure,macos
-http:
-  - method: GET
-    path:
-      - "{{BaseURL}}/.DS_Store"
-    matchers-condition: and
-    matchers:
-      - type: status
-        status:
-          - 200
-      - type: dsl
-        dsl:
-          - "contains(all_headers, 'application/octet-stream') || len(body) > 0"
+id: exposed-ds-store
+info:
+  name: Exposed .DS_Store
+  author: 28zenro
+  severity: info
+  description: 检测到 .DS_Store 文件泄露（可能泄露目录结构）
+  tags: exposure,macos
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/.DS_Store"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: dsl
+        dsl:
+          - "contains(all_headers, 'application/octet-stream') || len(body) > 0"

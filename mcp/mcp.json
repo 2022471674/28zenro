@@ -1,12 +1,12 @@
-{
-  "mcpServers": {
-    "28zenro": {
-      "command": "python",
-      "args": ["D:/Code/pythonCode/CTFcrypto/mcp/server.py"],
-      "env": {
-        "PYTHONIOENCODING": "utf-8",
-        "PYTHONUTF8": "1"
-      }
-    }
-  }
-}
+{
+  "mcpServers": {
+    "28zenro": {
+      "command": "python",
+      "args": ["D:/Code/pythonCode/CTFcrypto/mcp/server.py"],
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      }
+    }
+  }
+}

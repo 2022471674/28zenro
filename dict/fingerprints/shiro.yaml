@@ -1,25 +1,25 @@
-id: shiro
-info:
-  name: Apache Shiro
-  author: 28zenro
-  tags: detect,tech,shiro,java
-  severity: info
-  metadata:
-    product: shiro
-    vendor: apache
-    verified: true
-http:
-  - method: GET
-    path:
-      - '/'
-    matchers:
-      - type: word
-        words:
-          - rememberMe=deleteMe
-        part: header
-        case-insensitive: true
-      - type: word
-        words:
-          - rememberme=deleteme
-        part: header
-        case-insensitive: true
+id: shiro
+info:
+  name: Apache Shiro
+  author: 28zenro
+  tags: detect,tech,shiro,java
+  severity: info
+  metadata:
+    product: shiro
+    vendor: apache
+    verified: true
+http:
+  - method: GET
+    path:
+      - '/'
+    matchers:
+      - type: word
+        words:
+          - rememberMe=deleteMe
+        part: header
+        case-insensitive: true
+      - type: word
+        words:
+          - rememberme=deleteme
+        part: header
+        case-insensitive: true
