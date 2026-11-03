@@ -1,0 +1,13 @@
+{
+  "latest": "1.0.1",
+  "min_supported": "1.0.0",
+  "assets": {
+    "full": {
+      "url": "https://github.com/2022471674/28zenro/releases/download/v1.0.1/28zenro-1.0.1-win.zip",
+      "sha256": "da41736af9432772618e553785e3e7f691780c55089e1fb6942b62cb95c077c6",
+      "size": 164606302
+    }
+  },
+  "notes": "首个发布版本：图形化安装器 + 自动更新体系",
+  "published_at": "2026-11-03T12:00:00Z"
+}
